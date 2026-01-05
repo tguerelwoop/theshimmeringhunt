@@ -4,22 +4,21 @@ let currentPage = localStorage.getItem('currentPage') || 'password';
 
 // VALID ANSWERS
 const validPairs = [
-  ['red', 'fish'],
-  ['pink', 'coral'],
-  ['green', 'seaweed'],
-  ['blue', 'waves'],
-  ['purple', 'jellyfish'],
-  ['white', 'pearl'],
-  ['orange', 'starfish'],
-  ['black', 'octopus'],
-  ['teal', 'dolphin'],
-  ['pink', 'shrimp'],
-  ['red', 'crab'],
-  ['red', 'squid'],
-  ['green', 'turtle'],
-  ['orange', 'seahorse'],
-  ['silver', "mermaid’s song"],
-  ['silver', "mermaid's song"]
+  ['fish', 'red'],
+  ['coral', 'pink'],
+  ['seaweed', 'green'],
+  ['waves', 'blue'],
+  ['jellyfish', 'purple'],
+  ['pearl', 'white'],
+  ['starfish', 'orange'],
+  ['octopus', 'black'],
+  ['dolphin', 'teal'],
+  ['shrimp', 'pink'],
+  ['crab', 'red'],
+  ['squid', 'red'],
+  ['turtle', 'green'],
+  ['seahorse', 'orange'],
+  ["mermaid's song", 'silver']
 ];
 
 function showPage(pageId) {
@@ -41,7 +40,7 @@ function checkPassword() {
     localStorage.setItem('currentPage', 1);
     showPage(1);
   } else {
-    error.textContent = 'That is not the truth.';
+    error.textContent = 'Think again, dear.';
   }
 }
 
