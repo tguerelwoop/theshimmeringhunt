@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Society Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <section class="page" data-page="password">
+    <h1>A Matter of Observation</h1>
+
+    <p>
+      Complete the statement truthfully.
+    </p>
+
+    <div class="password-form">
+      <span>The</span>
+      <input id="colorInput" type="text" placeholder="blank" />
+      <span>is</span>
+      <input id="symbolInput" type="text" placeholder="blank" />
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <button onclick="checkPassword()">Proceed</button>
+  </section>
+  
+  <section class="page active" data-page="1">
+    <h1>Dearest Reader</h1>
+    <p>Only those of wit and discretion may proceed.</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="2">
+    <h1>Riddle I</h1>
+    <p>[Caesar Box Puzzle Placeholder]</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="3">
+    <h1>Riddle II</h1>
+    <p>[Jigsaw Puzzle Placeholder]</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="4">
+    <h1>Riddle III</h1>
+    <p>[Mirrored Text Placeholder]</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="5">
+    <h1>Riddle IV</h1>
+    <p>[Sheet Music Cipher Placeholder]</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="6">
+    <h1>Riddle V</h1>
+    <p>[Portrait Gaze Puzzle Placeholder]</p>
+    <button onclick="nextPage()">Next</button>
+  </section>
+
+  <section class="page" data-page="7">
+    <h1>Final Revelation</h1>
+    <p>The invitation is now unsealed.</p>
+    <a class="download" href="invitation.pdf" download>Download Invitation</a>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
