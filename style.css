@@ -2,9 +2,9 @@
 
 body {
   margin: 0;
-  background: #f7f3ea;
+  background: #FFE5EA;
   font-family: 'Cormorant Garamond', serif;
-  color: #1c1c1c;
+  color: #D18293;
 }
 
 #app {
@@ -38,7 +38,7 @@ body {
 }
 
 .error {
-  color: #8b0000;
+  color: #8C3F4D;
   margin-top: 15px;
 }
 
