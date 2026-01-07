@@ -55,5 +55,23 @@ function restartGame() {
   location.reload();
 }
 
+function checkPagePassword(button) {
+  const section = button.closest('.page');
+  const input = section.querySelector('input');
+  const error = section.querySelector('.error');
+
+  const correct = section.dataset.password.toLowerCase();
+  const entered = input.value.trim().toLowerCase();
+
+  if (entered === correct) {
+    const next = parseInt(section.dataset.page) + 1;
+    localStorage.setItem('currentPage', next);
+    showPage(next);
+  } else {
+    error.textContent = 'That word would ruin one’s reputation.';
+  }
+}
+
+
 // Load saved progress
 showPage(currentPage);
