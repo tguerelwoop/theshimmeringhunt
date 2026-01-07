@@ -58,16 +58,15 @@ button, .download {
   font-family: inherit;
   font-size: 1rem;
   padding: 12px 30px;
-  border: 1px solid #c8a951;
   background: transparent;
   cursor: pointer;
   text-decoration: none;
-  color: #1c1c1c;
+  color: ##D72865;
 }
 
 button:hover, .download:hover {
-  background: #c8a951;
-  color: #fff;
+  background: ##DF4E81;
+  color: ##F4C3D4;
 }
 
 .page input {
@@ -79,6 +78,6 @@ button:hover, .download:hover {
 }
 
 .page .error {
-  color: #8b0000;
+  color: #8C5656;
   min-height: 1em;
 }
