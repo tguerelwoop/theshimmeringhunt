@@ -102,16 +102,20 @@ function checkPagePassword(button) {
 function showHint(button) {
   const page = button.closest('.page');
   const hintBox = page.querySelector('.hint');
-  const hintText = page.dataset.hint;
 
-  hintBox.innerHTML = `
-    <input type="text" value="${hintText}" readonly>
-    <button onclick="hideHint(this)">Close</button>
-  `;
+  hintBox.textContent = page.dataset.hint;
 }
 
 function hideHint(button) {
-  button.closest('.hint').innerHTML = '';
+  button.closest('.hint').textContent = '';
+}
+
+function showHint(button) {
+  const page = button.closest('.page');
+  const hintBox = page.querySelector('.hint');
+
+  hintBox.textContent =
+    hintBox.textContent ? '' : page.dataset.hint;
 }
 
 // Load saved progress
