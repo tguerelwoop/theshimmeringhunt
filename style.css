@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&display=swap');
 
 @font-face {
-  font-family: Londona; /* set name */
+  font-family: Londona; /* set name */ 
   src: url(Londona-reguler.otf); /* url of the font */
 }
 @font-face {
@@ -112,12 +112,9 @@ button:hover, .download:hover {
 }
 
 .jigsaw {
-  border: none;
-  width: 700px;
-  height: 500px;
-  display: block;
-  margin-bottom: 10px;
-
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 7 / 5;
 }
 
 .hint {
@@ -157,3 +154,53 @@ button:hover, .download:hover {
   text-decoration: none;
 }
 
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .jigsaw {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 7 / 5; /* preserves puzzle shape */
+  }
+
+  .password-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page input {
+    width: 120px;
+  }
+
+  button,
+  .button-87 {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px;
+  }
+
+  .hint {
+    max-width: 90%;
+    font-size: 0.95rem;
+  }
+}
