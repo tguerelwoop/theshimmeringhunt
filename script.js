@@ -91,7 +91,7 @@ function checkPagePassword(button) {
     localStorage.setItem('currentPage', next);
     showPage(next);
     return;
-  }
+  } 
 
   // increment per-page attempt count
   const attempts = Number(section.dataset.attempts || 0);
