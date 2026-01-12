@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&display=swap');
 
+@font-face {
+  font-family: Londona; /* set name */
+  src: url(Londona-reguler.otf); /* url of the font */
+}
+@font-face {
+  font-family: Starry; /* set name */
+  src: url(One-Starry-Night.ttf); /* url of the font */
+}
+@font-face {
+  font-family: Mercy; /* set name */
+  src: url(Mercy-Christole.ttf); /* url of the font */
+}
+
 body {
   background: #FFE5EA;
   font-family: 'Cormorant Garamond', serif;
@@ -43,9 +56,9 @@ body {
 
 
 h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-family: 'Mercy', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 h3{
