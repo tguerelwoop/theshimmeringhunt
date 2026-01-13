@@ -14,7 +14,7 @@
   src: url(Mercy-Christole.ttf);
 }
 
-/* GLOBAL SAFETY */
+/* GLOBAL RESET + SAFETY */
 *,
 *::before,
 *::after {
@@ -48,7 +48,9 @@ body {
 }
 
 .page.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* HEADINGS & TEXT */
@@ -56,6 +58,7 @@ h1 {
   font-family: 'Mercy', serif;
   font-size: 3rem;
   margin: 20px 0 10px;
+  text-align: center;
 }
 
 h3 {
@@ -69,9 +72,10 @@ p {
   font-size: 2rem;
   margin: 20px auto 30px;
   max-width: 90%;
+  text-align: center;
 }
 
-/* FOR MIRRORED TEXT */
+/* MIRRORED TEXT */
 .mirror {
   transform: scaleX(-1) rotate(180deg);
   display: inline-block;
@@ -103,6 +107,7 @@ p {
   min-height: 1em;
   font-size: 1rem;
   margin-top: 10px;
+  text-align: center;
 }
 
 /* BUTTONS */
@@ -117,6 +122,7 @@ button,
   font-size: 1rem;
   cursor: pointer;
   border-radius: 10px;
+  text-align: center;
 }
 
 /* Decorative gradient button */
@@ -149,9 +155,10 @@ button,
   font-style: italic;
   max-width: 90%;
   border-radius: 10px;
+  text-align: center;
 }
 
-/* IMAGES (CRITICAL FOR MOBILE) */
+/* IMAGES */
 img {
   max-width: 100%;
   height: auto;
@@ -170,7 +177,7 @@ img {
   margin: 0 auto 20px;
 }
 
-/* MOBILE TWEAKS */
+/* MOBILE */
 @media (max-width: 768px) {
 
   h1 {
