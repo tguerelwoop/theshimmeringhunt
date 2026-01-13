@@ -1,213 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&display=swap');
 
+/* Custom fonts */
 @font-face {
-  font-family: Londona; /* set name */ 
-  src: url(Londona-reguler.otf); /* url of the font */
+  font-family: Londona;
+  src: url(Londona-reguler.otf);
 }
 @font-face {
-  font-family: Starry; /* set name */
-  src: url(One-Starry-Night.ttf); /* url of the font */
+  font-family: Starry;
+  src: url(One-Starry-Night.ttf);
 }
 @font-face {
-  font-family: Mercy; /* set name */
-  src: url(Mercy-Christole.ttf); /* url of the font */
+  font-family: Mercy;
+  src: url(Mercy-Christole.ttf);
 }
+
+/* GLOBAL SAFETY */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
   overflow-x: hidden;
-  overflow-y: auto; 
 }
+
 body {
   background: #FFE5EA;
   font-family: 'Cormorant Garamond', serif;
   color: #D18293;
 }
 
+/* APP WRAPPER */
 #app {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
+/* PAGES */
 .page {
   display: none;
 }
 
 .page.active {
   display: block;
-  text-align: center;
 }
 
-
-.password-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 30px 0;
-}
-
-.password-form input {
-  width: 60px;
-  padding: 6px;
-  font-family: inherit;
-  text-align: center;
-}
-
-.error {
-  color: #8C3F4D;
-  margin-top: 15px;
-}
-
-
+/* HEADINGS & TEXT */
 h1 {
   font-family: 'Mercy', serif;
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
 
-h3{
-  size: medium;
+h3 {
+  margin: 0 auto 20px;
+  max-width: 90%;
+  font-size: 1.1rem;
   text-align: center;
-  margin-left:20%;
-  margin-right:20%;
 }
 
 p {
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin: 20px auto 30px;
+  max-width: 90%;
 }
 
-
-button, .download {
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 12px 30px;
-  background: transparent;
-  cursor: pointer;
-  text-decoration: none;
-  color: #D72865;
+/* FOR MIRRORED TEXT */
+.mirror {
+  transform: scaleX(-1) rotate(180deg);
+  display: inline-block;
+  max-width: 100%;
 }
 
-button:hover, .download:hover {
-  background: #DF4E81;
-  color: #F4C3D4;
+/* PASSWORD FORM */
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
 }
 
 .page input {
+  width: 120px;
   padding: 10px;
   font-family: inherit;
   text-align: center;
-  margin-bottom: 10px;
-  width: 60px;
   border-radius: 10px;
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
   color: #DF4E81;
 }
 
-.page .error {
+/* ERRORS */
+.error {
   color: #beaab5;
   min-height: 1em;
-  font-size: medium;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
-.mirror {
-  transform: scaleX(-1);
-  rotate: 180;
-}
-
-.jigsaw {
-  width: 100%;
-  max-width: 700px;
-  aspect-ratio: 7 / 5;
-  height: auto;
-  margin: 0 auto 20px;
-}
-
-.hint {
-  margin-top: 20px;
-  padding: 16px 20px;
-  background: #FFF1F4;
-  font-style: italic;
-  max-width: 400px;
-  border-radius: 10px;
-  
-}
-
-/* CSS */
+/* BUTTONS */
+button,
+.download,
 .button-87 {
-  margin: 10px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 2s;
-  background-size: 200% auto;
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  background-image: linear-gradient(45deg, #ff83a4 0%, #d8b3b3  51%, #f72386  100%);
+  width: 100%;
+  max-width: 260px;
+  margin: 10px auto;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 1rem;
   cursor: pointer;
-  -webkit-user-select: none;
+  border-radius: 10px;
+}
+
+/* Decorative gradient button */
+.button-87 {
+  text-transform: uppercase;
+  transition: background-position 0.6s ease;
+  background-size: 200% auto;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  background-image: linear-gradient(
+    45deg,
+    #ff83a4 0%,
+    #d8b3b3 51%,
+    #f72386 100%
+  );
   user-select: none;
   touch-action: manipulation;
 }
 
 .button-87:hover {
   background-position: right center;
-  /* change the direction of the change here */
-  color: #ffffff;
-  text-decoration: none;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
+/* HINT BOX */
+.hint {
+  margin: 20px auto 0;
+  padding: 16px 20px;
+  background: #FFF1F4;
+  font-style: italic;
+  max-width: 90%;
+  border-radius: 10px;
+}
 
-  body {
-    padding: 10px;
-  }
+/* IMAGES (CRITICAL FOR MOBILE) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* JIGSAW / IFRAME */
+.jigsaw {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 7 / 5;
+  height: auto;
+  border: none;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* MOBILE TWEAKS */
+@media (max-width: 768px) {
 
   h1 {
     font-size: 2rem;
   }
 
-  h3 {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 1rem;
-  }
-
   p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
   }
 
   .jigsaw {
-    width: 100%;
     max-width: 360px;
-    height: auto;
-    aspect-ratio: 7 / 5; /* preserves puzzle shape */
-  }
-
-  .password-form {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .page input {
-    width: 120px;
-  }
-
-  button,
-  .button-87 {
-    width: 100%;
-    max-width: 260px;
-    padding: 14px;
-  }
-
-  .hint {
-    max-width: 90%;
-    font-size: 0.95rem;
   }
 }
